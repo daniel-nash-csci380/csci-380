@@ -6,7 +6,7 @@ const vowels = ["A", "E", "I", "O", "U"]
 
 const outputDiv = document.querySelector("#output")
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < (companies.length-1); i++) {
     const companyName = companies[Math.floor(Math.random() * companies.length)]
 
     const firstLetter = companyName.charAt(0)

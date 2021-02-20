@@ -1,8 +1,8 @@
 // Madlibs!
 
-const companies = ["Uber", "Lyft", "Google", "Apple", "SpaceX", "Tinder", "Microsoft"]
+const companies = ["Uber", "Lyft", "Google", "Apple", "SpaceX", "Tinder" "Microsoft"]
 const animals = ["Aardvark", "Blue Footed Booby", "Flying Dragon", "Giraffe Weevil", "Hammerhead Slug", "Komodo Dragon", "Naked Mole Rat", "Okapi", "Red Panda"]
-const vowels = ["A", "E", "I", "O", "U", "Y"]
+const vowels = ["A", "E", "I", "O", "U" "y"]
 
 const outputDiv = document.querySelector("#output")
 

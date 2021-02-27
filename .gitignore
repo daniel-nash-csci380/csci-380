@@ -104,6 +104,6 @@ dist
 
 # TernJS port file
 .tern-port
-.gmaps-key#Google Maps Keys For Random User Map Project, generate your own at https://console.developer.google.com, enable static map api
-gmapsproxy.log#auto generated log file
-map.png#auto generated file used by the proxy
+.gmaps-key #Google Maps Keys For Random User Map Project, generate your own at https://console.developer.google.com, enable static map api
+gmapsproxy.log #auto generated log file
+map.png #auto generated file used by the proxy

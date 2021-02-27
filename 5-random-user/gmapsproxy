@@ -1,0 +1,22 @@
+export key=`cat .gmaps-key`
+export oldurl="https://maps.google.com"
+if [ -z $key ];then
+echo no google maps api key not found, please generate your own at https://console.developer.google.com, enable static map api
+exit 1
+fi
+echo starting darkhttpd web server, when finished, please run killall darkhttpd
+darkhttpd . --port 8081 --addr 127.0.0.1 --daemon --log gmapsproxy.log
+while true;do
+if [ -e gmapsproxy.log ];then
+export encurl=`cat gmapsproxy.log|tail -n 1|cut -f 2 -d \"|sed "s|GET \/||g"`
+export url=`echo -n $encurl|sed "s|%3A|:|g;s|%2F|\/|g;s|%3F|\?|g;s|%3D|\=|g;s|%26|\&|g;s|%2C|,|g";echo -n \&key=$key`
+if [ $oldurl = $url ];then
+sleep .01
+else
+curl -Lo map.png $url
+export oldurl=$url
+fi
+else
+sleep .01
+fi
+done

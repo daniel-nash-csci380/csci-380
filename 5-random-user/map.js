@@ -37,5 +37,6 @@ function updateProfile(profile) {
   state.innerHTML = profile.results[0].location.state;
   latitude.innerHTML = profile.results[0].location.coordinates.latitude;
   longitude.innerHTML = profile.results[0].location.coordinates.longitude;
+  mapsearch.innerHTML = "https://maps.google.com/search?q="(latitude.innerHTML),(longitude.innerHTML));
   return 1;
 }
